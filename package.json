@@ -1,0 +1,36 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "An API that is used to scale an image via the given URL query parameters. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jasmine",
+    "lint": "eslint . --ext .ts",
+    "build": "npx tsc && node dist/index.js",
+    "format": "prettier --config .prettierrc src/**/*.ts --write",
+    "start": "npm run build && nodemon dist/index.js"
+  },
+  "author": "Yusuf Abdelaziz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.0.3",
+    "@types/node": "^18.7.9",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "colors": "^1.4.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jasmine": "^4.3.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
