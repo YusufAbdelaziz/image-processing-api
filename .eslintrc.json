@@ -13,6 +13,8 @@
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
+    // Prevents using "any" keyword explicitly.
+    "@typescript-eslint/no-explicit-any": "error",
     "prettier/prettier": "warn",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"]
   }
