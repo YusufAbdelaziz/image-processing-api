@@ -1,6 +1,6 @@
 # Overview
 
-A web app used to an resize image that exists locally given `width` and `height` as query params.
+A web app used to resize an image that exists locally given `width` and `height` as query params.
 </br>
 
 ## Scripts
