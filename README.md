@@ -11,14 +11,14 @@ A web app used to an resize image that exists locally given `width` and `height`
 
   </br>
 
-| Scripts          | Functionality                                                           |
-| ---------------- | ----------------------------------------------------------------------- |
-| `npm install`    | Installs the necessary packages.                                        |
-| `npm run start`  | Starts the app at port 3000.                                            |
-| `npm run lint`   | Runs ESLint on all TypeScript files.                                    |
-| `npm run format` | Runs Prettier on all TypeScript files to format all files.              |
-| `npm run build`  | Transpiles TS files to JS files located at dist and builds the project. |
-| `npm run test`   | Runs all specs defined in `tests` folder.                               |
+| Scripts          | Functionality                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| `npm install`    | Installs the necessary packages.                                                   |
+| `npm run start`  | Starts the app at port 3000.                                                       |
+| `npm run lint`   | Runs ESLint on all TypeScript files.                                               |
+| `npm run format` | Runs Prettier on all TypeScript files to format all files.                         |
+| `npm run build`  | Builds the project by transpiling TS files to JS files that are located at `dist`. |
+| `npm run test`   | Runs all specs defined in `tests` folder.                                          |
 
 ---
 
