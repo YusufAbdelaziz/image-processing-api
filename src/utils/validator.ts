@@ -27,8 +27,8 @@ function validatorMiddleware(req: Request, res: Response, next: NextFunction): v
 
 function validateQueryParameters(): ValidationChain[] {
   return [
-    query("width").isInt({ min: 0 }).withMessage("Provide a non-negative width"),
-    query("height").isInt({ min: 0 }).withMessage("Provide a non-negative height"),
+    query("width").isInt({ min: 0 }).withMessage("Provide a non-negative integer for the width"),
+    query("height").isInt({ min: 0 }).withMessage("Provide a non-negative integer for the height"),
     query("fileName").isString().withMessage("Please provide a file name")
   ];
 }

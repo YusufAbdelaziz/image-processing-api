@@ -10,6 +10,6 @@ app.get("/", (_, res) => {
   res.send("You're in main route, Kindly go to api/editImage");
 });
 
-app.listen(port, () => console.log("listening on http://localhost:3000/api"));
+app.listen(port, () => console.log("listening on http://localhost:3000/api/editImage"));
 
 export default app;

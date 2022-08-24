@@ -24,21 +24,25 @@ describe("Tests the app endpoints", () => {
     const response = await request.get("/api/editImage");
     expect(response.status).toBe(400);
     expect(JSON.parse(response.text)).toEqual({
-      errors: ["Provide a non-negative width", "Provide a non-negative height", "Please provide a file name"]
+      errors: [
+        "Provide a non-negative integer for the width",
+        "Provide a non-negative integer for the height",
+        "Please provide a file name"
+      ]
     });
   });
   it('tests the "/api/editImage" endpoint with negative/absent width', async () => {
     const response = await request.get("/api/editImage?width=-10&height=20&fileName=test");
     expect(response.status).toBe(400);
     expect(JSON.parse(response.text)).toEqual({
-      errors: ["Provide a non-negative width"]
+      errors: ["Provide a non-negative integer for the width"]
     });
   });
   it('tests the "/api/editImage" endpoint with negative/absent height', async () => {
     const response = await request.get("/api/editImage?width=10&height=-20&fileName=test");
     expect(response.status).toBe(400);
     expect(JSON.parse(response.text)).toEqual({
-      errors: ["Provide a non-negative height"]
+      errors: ["Provide a non-negative integer for the height"]
     });
   });
   it('tests the "/api/editImage" endpoint with absent file name', async () => {
