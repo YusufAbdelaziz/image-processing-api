@@ -16,8 +16,6 @@ A web app used to an resize image that exists locally given `width` and `height`
 | `npm run build`  | Builds the project by transpiling TS files to JS files that are located at `dist`. |
 | `npm run test`   | Runs all specs defined in `tests` folder.                                          |
 
----
-
 ## Endpoints
 
   </br>
@@ -30,8 +28,6 @@ A web app used to an resize image that exists locally given `width` and `height`
   | width    | Positive integer                                                   |
   | height   | Positive integer                                                   |
   | fileName | String (Note that the file name should exist at /images directory) |
-
----
 
 ## Example
 
