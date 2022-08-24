@@ -1,4 +1,5 @@
 # Overview
+[![wakatime](https://wakatime.com/badge/user/2009fdf2-8d6f-4d87-9435-7ec784a9054f/project/25dd22f2-0765-4bd7-851b-3ec7e022dc60.svg)](https://wakatime.com/badge/user/2009fdf2-8d6f-4d87-9435-7ec784a9054f/project/25dd22f2-0765-4bd7-851b-3ec7e022dc60)
 
 A web app used to resize an image that exists locally given `width` and `height` as query params.
 </br>
