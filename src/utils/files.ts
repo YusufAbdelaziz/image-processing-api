@@ -1,6 +1,6 @@
-import fs from 'fs-extra';
-import path from 'path';
-import { ImageInfo } from '../types/imageInfo';
+import fs from "fs-extra";
+import path from "path";
+import { ImageInfo } from "../types/imageInfo";
 
 type RawImage = {
   rawImageExist: boolean;
@@ -15,13 +15,13 @@ type RawImage = {
 async function getExitingModifiedImageByPath(imageInfo: ImageInfo): Promise<Buffer> {
   try {
     // Creates /thumbnails folder in case it doesn't exist.
-    await fs.ensureDir(path.join(__dirname, '../../thumbnails/'));
+    await fs.ensureDir(path.join(__dirname, "../../thumbnails/"));
     // Fetches the cached modified image (which has the same height and width of the given image info).
     const image = await fs.readFile(
       path.join(
         __dirname,
-        '../../thumbnails/',
-        path.parse(`${imageInfo.name}-${imageInfo.width}x${imageInfo.height}`).name + '.jpg'
+        "../../thumbnails/",
+        path.parse(`${imageInfo.name}-${imageInfo.width}x${imageInfo.height}`).name + ".jpg"
       )
     );
     return image;
@@ -38,11 +38,11 @@ async function getExitingModifiedImageByPath(imageInfo: ImageInfo): Promise<Buff
  */
 async function rawImageExistenceCheck(imageName: string): Promise<RawImage> {
   try {
-    const image = await fs.readFile(path.join(__dirname, '../../images', path.parse(imageName).name + '.jpg'));
+    const image = await fs.readFile(path.join(__dirname, "../../images", path.parse(imageName).name + ".jpg"));
     return { rawImageExist: true, rawImage: image };
   } catch (e) {
     return { rawImageExist: false, rawImage: null };
   }
 }
 
-export { getExitingModifiedImageByPath, rawImageExistenceCheck };
+export { getExitingModifiedImageByPath, rawImageExistenceCheck, RawImage };

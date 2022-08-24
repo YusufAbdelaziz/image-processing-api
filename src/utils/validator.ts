@@ -1,5 +1,5 @@
-import { ValidationChain, query, validationResult } from 'express-validator';
-import { Request, Response, NextFunction } from 'express';
+import { ValidationChain, query, validationResult } from "express-validator";
+import { Request, Response, NextFunction } from "express";
 
 type Error = {
   errors: string[];
@@ -27,9 +27,9 @@ function validatorMiddleware(req: Request, res: Response, next: NextFunction): v
 
 function validateQueryParameters(): ValidationChain[] {
   return [
-    query('width').isInt({ min: 0 }).withMessage('Provide a non-negative width'),
-    query('height').isInt({ min: 0 }).withMessage('Provide a non-negative height'),
-    query('fileName').isString().withMessage('Please provide a file name')
+    query("width").isInt({ min: 0 }).withMessage("Provide a non-negative width"),
+    query("height").isInt({ min: 0 }).withMessage("Provide a non-negative height"),
+    query("fileName").isString().withMessage("Please provide a file name")
   ];
 }
 /**
@@ -40,8 +40,8 @@ function validateQueryParameters(): ValidationChain[] {
 function generateErrorString(req: Request): Error {
   const errors = validationResult(req);
   const errorArr = [];
-  for (const error of errors['errors']) {
-    errorArr.push(error['msg']);
+  for (const error of errors["errors"]) {
+    errorArr.push(error["msg"]);
   }
   return { errors: errorArr };
 }

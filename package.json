@@ -4,9 +4,10 @@
   "description": "An API that is used to scale an image via the given URL query parameters. ",
   "main": "index.js",
   "scripts": {
-    "test": "npx jasmine",
+    "test": "npm run build && npm run jasmine",
+    "jasmine": "jasmine",
     "lint": "eslint . --ext .ts",
-    "build": "npx tsc && node dist/index.js",
+    "build": "rimraf dist && npx tsc",
     "format": "prettier --config .prettierrc src/**/*.ts --write",
     "start": "nodemon src/index.ts",
     "kill-port": "npx kill-port 3000"
@@ -29,7 +30,6 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
-    "colors": "^1.4.0",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
