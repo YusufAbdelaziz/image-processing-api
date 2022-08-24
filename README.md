@@ -6,7 +6,6 @@ A web app used to resize an image that exists locally given `width` and `height`
 
 ## Scripts
 
-  </br>
 
 | Scripts          | Functionality                                                                      |
 | ---------------- | ---------------------------------------------------------------------------------- |
@@ -18,8 +17,6 @@ A web app used to resize an image that exists locally given `width` and `height`
 | `npm run test`   | Runs all specs defined in `tests` folder.                                          |
 
 ## Endpoints
-
-  </br>
 
 - `/api/editImage` should be accessed to resize the given image.
   </br>
